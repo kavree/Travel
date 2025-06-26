@@ -1,0 +1,5 @@
+{
+  "name": "Smart Travel Planner",
+  "description": "An application to automatically plan a 3-day, 2-night trip based on a city and travel style, using Gemini API. It displays the itinerary and lists key locations.",
+  "requestFramePermissions": []
+}
