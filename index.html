@@ -5,33 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Travel Planner</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.1.3/24/outline/heroicons.min.css" integrity="sha512-MatZtiJazoGZCVdao/XhDXWJvrS5LgTKOebD8WjJjwZ7b/gHPh3yY+4hBvjLMsFmSjH0bL1W+gJq8V0Kch9gLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
-      font-family: 'Inter', sans-serif; /* A nice default sans-serif font */
-      min-height: 100vh; /* Ensure body takes full viewport height */
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      color: #374151; /* Default text color: gray-700 */
     }
     .bg-gradient-main {
-      background-image: linear-gradient(to bottom right, #e0f2fe, #f0e7f9, #e0e7ff); /* Tailwind: from-sky-100 via-indigo-50 to-purple-100 */
+      /* A slightly more vibrant and modern gradient */
+      background-image: linear-gradient(to bottom right, #cffafe, #e0e7ff, #f3e8ff); /* Tailwind: from-cyan-100 via-indigo-100 to-purple-100 */
     }
-    /* Adding a custom scrollbar for better aesthetics if needed */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 10px;
+      height: 10px;
     }
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: #f0e7f9; /* A light, neutral color from the gradient */
     }
     ::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 4px;
+      background: #a78bfa; /* A muted purple, Tailwind: purple-400 */
+      border-radius: 5px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #555;
+      background: #8b5cf6; /* Darker purple, Tailwind: purple-500 */
     }
     #map-container {
-      height: 400px; /* Default height, can be overridden */
+      height: 400px; /* Default height */
       border-radius: 0.75rem; /* rounded-xl */
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+      /* Softer shadow for the map container */
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07); /* shadow-lg custom */
+      border: 1px solid #e5e7eb; /* border-gray-200 */
     }
   </style>
 <script type="importmap">
